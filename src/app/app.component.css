@@ -1,0 +1,13 @@
+.card {
+  height : 500px;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}

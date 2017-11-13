@@ -1,0 +1,22 @@
+<p></p>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="username" #username type="text" class="validate">
+        <label for="username">User Name </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="password" #password type="text" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <div class="input-field col s6">
+    <a class="center waves-effect waves-light btn" (click)="login(username.value, password.value)">Login</a>
+  </div>
+</div>

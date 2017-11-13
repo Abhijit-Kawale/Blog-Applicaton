@@ -1,0 +1,35 @@
+<p></p>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="title" #title type="text" class="validate" value="{{oldtitle}}">
+        <label for="title">Title </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="category" #category type="text" class="validate" value="{{oldcat}}">
+        <label for="category">Category</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" #content1 class="materialize-textarea" value="{{oldcontent}}"></textarea>
+          <label for="textarea1">Content</label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <div class="input-field col s6">
+    <a class="center waves-effect waves-light btn" (click)="publish(title.value, category.value,content1.value)">
+      <div *ngIf="toeditid==-1; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>Publish</ng-template>
+      <ng-template #elseBlock>Update</ng-template>
+    </a>
+    <a class="center waves-effect waves-light btn" (click)="cancle()">Cancel</a>
+  </div>
+</div>

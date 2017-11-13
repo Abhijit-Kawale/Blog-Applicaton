@@ -1,0 +1,47 @@
+<div class="collection">
+  <div class="container">
+    <p></p>
+    <div style="float: right;">
+      Welcome <b>{{currentuser.username}}</b>
+      <button class="waves-effect red btn" (click)="logout()">Logout<i class="material-icons right">power_settings_new</i></button>
+    </div>
+    <p></p>
+    <button class="waves-effect waves-light btn" (click)="showAll()">Show All</button>
+    <button class="waves-effect waves-light btn" (click)="showFav()">
+      Show <i class="material-icons right" style="color:deeppink">favorite</i>
+    </button>
+
+    <div class="form-group">
+      <select class="browser-default" name="category1" [(ngModel)]="category">
+          <option *ngFor="let cat of catlist" [value]="cat" >{{cat}}</option>
+      </select>
+    </div>
+
+
+    <p></p>
+    <a *ngFor="let blog of blogs " class="collection-item">
+      <ng-template [ngIf]=" (currentuser.favorite.includes(blog.id) || !sortfav) && (category==blog.catagory  || category=='Show all categories') "><div>
+          <h2>{{blog.title}}</h2>
+          <h5 > Author: {{blog.author}} </h5>
+          <sup> Published/Updated On: {{getmydate(blog.date)}}</sup>
+          <h6> Category : {{blog.catagory}} </h6>
+          <blockquote>{{blog.content}}</blockquote>
+
+          <div *ngIf="currentuser.favorite.includes(blog.id); then thenBlock else elseBlock"></div>
+          <ng-template #thenBlock>
+            <button class="material-icons" style="color:deeppink" (click)="toggleFav(blog.id)">favorite</button>
+          </ng-template>
+          <ng-template #elseBlock>
+            <button class="material-icons" style="color:gray" (click)="toggleFav(blog.id)">favorite</button>
+          </ng-template>
+        <div *ngIf="blog.author==currentuser.username">
+          <button class="material-icons" (click)="edit(blog.id)">edit</button>
+          <button class="material-icons" (click)="deleteblog(blog.id)">delete</button>
+        </div>
+
+      </div></ng-template>
+
+
+    </a>
+  </div>
+</div>

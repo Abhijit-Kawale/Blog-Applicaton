@@ -1,0 +1,10 @@
+<div *ngIf=" cuser.id==-1 ; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <app-login (sendusername)="setcuser($event)"></app-login>
+</ng-template>
+<ng-template #elseBlock>
+  <app-blogs [blogs] = "bloglist" [catlist]="categorylist" [currentuser] = "cuser"
+             (edblog)="editblog($event)" (delblog)="deleteblog($event)" (updateuser)="UpdateUser($event)" (logoutuser)="logoutuser($event)"></app-blogs>
+</ng-template>
+
+

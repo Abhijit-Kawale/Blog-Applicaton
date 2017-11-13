@@ -1,0 +1,83 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Kawaw",
+      "author": "user1",
+      "date": 1510535483311,
+      "catagory": "asda",
+      "content": "asdasdadsadsadsa111111111\nasd\nasd\nas\nd"
+    },
+    {
+      "id": 3,
+      "title": "11111111",
+      "author": "user2",
+      "date": 1510533832327,
+      "catagory": "2222222",
+      "content": "333333333333333333333\n44444444444444\n666"
+    },
+    {
+      "title": "KKkk``````````````````",
+      "author": "user2",
+      "date": 1510535527524,
+      "catagory": "23e3123",
+      "content": "ascas\nascc\nasc\nas\n",
+      "id": 4
+    },
+    {
+      "title": "No",
+      "author": "user2",
+      "date": 1510533893277,
+      "catagory": "KK",
+      "content": "1111111111xsasdasd",
+      "id": 5
+    },
+    {
+      "title": "KKK",
+      "author": "user1",
+      "date": 1510534400909,
+      "catagory": "2222222`",
+      "content": "aSASADSA\nDAS\nDSA\nDA\nSD",
+      "id": 6
+    },
+    {
+      "title": "hehe",
+      "author": "user1",
+      "date": 1510534597849,
+      "catagory": "asda",
+      "content": "asdd",
+      "id": 7
+    },
+    {
+      "title": "qqqqqqqq",
+      "author": "user1",
+      "date": 1510535501986,
+      "catagory": "qqqqqqqqqqq",
+      "content": "qqqqqqqqq",
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "username": "user1",
+      "password": "password1",
+      "favorite": [
+        0,
+        7,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "username": "user2",
+      "password": "password2",
+      "favorite": [
+        0,
+        4,
+        3,
+        1
+      ]
+    }
+  ]
+}
